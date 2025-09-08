@@ -38,7 +38,7 @@ The Prism series features cube-shaped LED displays designed for gamers and tech 
 ## 🚀 Getting Started
 
 1. **Choose your model** based on your space and needs
-2. **Follow the [WiFi Setup Guide](https://github.com/1liminal1/LiminalLights/wiki/WiFi-Setup)** to connect your cube
+2. **Follow the [WiFi Setup Guide](https://github.com/1liminal1/LiminalLights/wiki/WiFi‐Setup)** to connect your cube
 3. **Configure effects** using WLED or upload custom GIFs
 4. **Enjoy** your audio-reactive LED experience!
 
