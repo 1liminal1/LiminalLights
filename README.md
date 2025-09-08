@@ -2,7 +2,7 @@
 
 > Audio-reactive LED cubes that bring your gaming setup to life
 
-![Prism LED Cubes Demo](docs/images/man.gif)
+<img src="man.gif" alt="Prism LED Cubes Demo" width="300">
 
 ## 🎮 What is Prism?
 
