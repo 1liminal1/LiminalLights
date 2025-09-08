@@ -49,4 +49,4 @@ The Prism series features cube-shaped LED displays designed for gamers and tech 
 
 ---
 
-**Made with ❤️ for creators and dreamers** | [Wiki](https://github.com/1liminal1/LiminalLights/wiki) | [Issues](https://github.com/1liminal1/LiminalLights/issues) | [Discussions](https://github.com/1liminal1/LiminalLights/discussions)
+**Made with ❤️ for creators and dreamers** | [Wiki](https://github.com/1liminal1/LiminalLights/wiki) | [Issues](https://github.com/1liminal1/LiminalLights/issues)
