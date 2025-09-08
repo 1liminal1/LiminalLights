@@ -6,7 +6,7 @@
 
 ## 🎮 What is Prism?
 
-The Prism series features cube-shaped LED displays designed for gamers and tech enthusiasts who want stunning visual effects that react to music and audio. From compact WLED pattern displays to high-resolution GIF players, there's a Prism cube for every setup.
+The Prism series features cube-shaped LED displays designed for gamers and tech enthusiasts who want stunning visual effects that react to music and audio. Available in two sizes - compact cubes for bedside tables and large displays for bookshelves - each with standard or enhanced resolution options. All models feature WLED effects, while the enhanced resolution models also support custom GIFs and animations.
 
 ## 🔥 Quick Overview
 
