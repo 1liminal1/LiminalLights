@@ -2,7 +2,7 @@
 
 > Audio-reactive LED cubes that bring your gaming setup to life
 
-![Prism LED Cubes](https://github.com/1liminal1/LiminalLights/assets/placeholder-image.jpg)
+![Prism LED Cubes Demo](docs/images/man.gif)
 
 ## 🎮 What is Prism?
 
