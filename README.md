@@ -1,4 +1,4 @@
-# LiminalLights - Prism LED Series
+# Prism LED Series
 
 > Audio-reactive LED cubes that bring your gaming setup to life
 
