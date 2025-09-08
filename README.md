@@ -1,6 +1,6 @@
 # Prism LED Series
 
-> Audio-reactive LED cubes that bring your gaming setup to life
+> Audio-reactive LED cubes that bring your space to life
 
 <img src="docs/images/man.gif" alt="Prism LED Cubes Demo" width="300">
 
