@@ -14,14 +14,14 @@ The Prism series features cube-shaped LED displays designed for gamers and tech 
 |-------|------|--------------|-------------|
 | **Prism-8** | 192 | WLED Effects | Bedside tables, compact spaces |
 | **Prism-16** | 768 | WLED Effects | Bookshelves, streaming setups |
-| **Prism-32** | 3,072 | WLED Effects + GIFs | Bedside tables (enhanced resolution) |
-| **Prism-64** | 12,288 | WLED Effects + GIFs | Bookshelves, detailed content |
+| **Prism-32** | 3,072 | WLED Effects + GIFs | Bedside tables, enhanced resolution |
+| **Prism-64** | 12,288 | WLED Effects + GIFs | Bookshelves, enhanced resolution |
 
 ## ✨ Key Features
 
 - 🎵 **Audio Reactive** - Pulses and reacts to your game audio and music
 - 🎨 **Custom Colors** - Bespoke color options for personalized aesthetics
-- 🏠 **Smart Integration** - Alexa and Home Assistant support (Prism-32/64)
+- 🏠 **Smart Integration** - Alexa and Home Assistant support
 - 🖼️ **GIF Display** - Show custom animations and logos (Prism-32/64)
 - 🔌 **Plug & Play** - Easy setup process for immediate visual impact
 
