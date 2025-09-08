@@ -32,8 +32,8 @@ The Prism series features cube-shaped LED displays designed for gamers and tech 
 ### Quick Links
 - [WiFi Setup Guide](https://github.com/1liminal1/LiminalLights/wiki/WiFi‐Setup)
 - [Prism-8](https://github.com/1liminal1/LiminalLights/wiki/Prism-8) | [Prism-16](https://github.com/1liminal1/LiminalLights/wiki/Prism-16) | [Prism-32](https://github.com/1liminal1/LiminalLights/wiki/Prism-32) | [Prism-64](https://github.com/1liminal1/LiminalLights/wiki/Prism-64)
-- [GIF Content Guide](https://github.com/1liminal1/LiminalLights/wiki/GIF-Setup)
 - [WLED Configuration](https://github.com/1liminal1/LiminalLights/wiki/WLED-Setup)
+- [GIF Content Guide](https://github.com/1liminal1/LiminalLights/wiki/GIF-Setup)
 
 ## 🚀 Getting Started
 
