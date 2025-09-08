@@ -12,10 +12,10 @@ The Prism series features cube-shaped LED displays designed for gamers and tech 
 
 | Model | LEDs | Display Type | Perfect For |
 |-------|------|--------------|-------------|
-| **Prism-8** | 192 | WLED Effects | Desktop gaming setups |
-| **Prism-16** | 768 | WLED Effects | Streaming setups |
-| **Prism-32** | 3,072 | GIFs & Animations | Smart home integration |
-| **Prism-64** | 12,288 | High-res GIFs | Premium gaming rooms |
+| **Prism-8** | 192 | WLED Effects | Bedside tables, compact spaces |
+| **Prism-16** | 768 | WLED Effects | Bookshelves, streaming setups |
+| **Prism-32** | 3,072 | GIFs & Animations | Bedside tables (enhanced resolution) |
+| **Prism-64** | 12,288 | GIFs & Animations | Bookshelves, detailed content |
 
 ## ✨ Key Features
 
