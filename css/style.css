@@ -103,7 +103,7 @@ p {
   background: var(--bg-secondary);
   box-shadow: var(--shadow);
   z-index: 1000;
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-sm) 0;
 }
 
 .nav-container {
@@ -122,7 +122,7 @@ p {
 }
 
 .nav-logo img {
-  height: 58px;
+  height: 70px;
   width: auto;
 }
 
@@ -180,7 +180,7 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: calc(100px + var(--spacing-md)) var(--spacing-md) var(--spacing-md);
+  padding: calc(90px + var(--spacing-lg)) var(--spacing-md) var(--spacing-md);
   background: var(--bg-primary);
 }
 
@@ -191,7 +191,7 @@ p {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: var(--spacing-xl);
   align-items: flex-start;
   margin-bottom: var(--spacing-md);
