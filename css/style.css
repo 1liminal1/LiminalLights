@@ -103,7 +103,7 @@ p {
   background: var(--bg-secondary);
   box-shadow: var(--shadow);
   z-index: 1000;
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-md) 0;
 }
 
 .nav-container {
@@ -122,7 +122,7 @@ p {
 }
 
 .nav-logo img {
-  height: 48px;
+  height: 58px;
   width: auto;
 }
 
@@ -141,6 +141,7 @@ p {
 .nav-links a {
   color: var(--text-secondary);
   font-weight: 500;
+  font-size: 1.1rem;
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
@@ -179,7 +180,7 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: calc(80px + var(--spacing-md)) var(--spacing-md) var(--spacing-md);
+  padding: calc(100px + var(--spacing-md)) var(--spacing-md) var(--spacing-md);
   background: var(--bg-primary);
 }
 
@@ -192,7 +193,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: var(--spacing-md);
 }
 
@@ -220,7 +221,7 @@ p {
 
 .hero-gif {
   max-width: 100%;
-  max-height: 420px;
+  max-height: 500px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-strong);
 }
