@@ -1,0 +1,34 @@
+title: Liminal Lights - Prism LED Series
+description: "Audio-reactive LED cubes for gamers and creators. The Prism series features WLED effects, GIF displays, smart home integration, and music-reactive lighting in compact cube designs."
+url: "https://lights.liminal.net.au"
+baseurl: ""
+
+# SEO & Social
+author: Liminal Lights
+lang: en-AU
+
+# Open Graph / Social Sharing
+logo: /docs/images/man.gif
+social:
+  name: Liminal Lights
+
+# GitHub metadata
+repository: 1liminal1/LiminalLights
+
+# Jekyll plugins (supported by GitHub Pages)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /docs/images/man.gif
+
+# Exclude unnecessary files from the build
+exclude:
+  - LiminalLights.wiki
+  - LICENSE
+  - .git
