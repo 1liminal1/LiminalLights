@@ -67,9 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Image lazy loading fallback for older browsers
-  if ('loading' in HTMLImageElement.prototype) {
-    const images = document.querySelectorAll('img[loading="lazy"]');
+  // Image lazy loading fallback for older browsers.
+  // Only runs where native lazy loading is absent, and only for images that
+  // actually declare a data-src to swap in.
+  if (!('loading' in HTMLImageElement.prototype)) {
+    const images = document.querySelectorAll('img[loading="lazy"][data-src]');
     images.forEach(img => {
       img.src = img.dataset.src;
     });

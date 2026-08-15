@@ -576,6 +576,23 @@ section {
 .product-main-image {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-strong);
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.product-shots img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-strong);
 }
 
 .product-info h1 {
