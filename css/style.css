@@ -726,3 +726,34 @@ section {
     flex-direction: column;
   }
 }
+
+.legal {
+  max-width: 760px;
+}
+
+.legal h1 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.legal h2 {
+  font-size: 1.4rem;
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+}
+
+.legal p,
+.legal ul {
+  margin-bottom: var(--spacing-sm);
+}
+
+.legal ul {
+  padding-left: 1.4rem;
+}
+
+.legal li {
+  margin-bottom: 0.4rem;
+}
+
+.legal-updated {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
