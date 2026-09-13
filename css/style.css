@@ -330,6 +330,16 @@ section {
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
+  border-radius: var(--border-radius);
+}
+
+.range-grid {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.range-grid .btn-group {
+  margin-top: var(--spacing-sm);
 }
 
 .product-card-content {
