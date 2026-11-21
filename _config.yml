@@ -1,16 +1,28 @@
-title: Liminal Lights - Prism LED Series
+title: Liminal Lights
+tagline: Audio-reactive LED cubes
 description: "Audio-reactive LED cubes for gamers and creators. The Prism series features WLED effects, GIF displays, smart home integration, and music-reactive lighting in compact cube designs."
 url: "https://lights.liminal.net.au"
 baseurl: ""
 
-# SEO & Social
-author: Liminal Lights
+# SEO & Social (jekyll-seo-tag)
+author:
+  name: Liminal Lights
+  type: Organization
 lang: en-AU
-
-# Open Graph / Social Sharing
-logo: /docs/images/man.gif
+locale: en_AU
+logo: /docs/images/logo-nav.png
 social:
   name: Liminal Lights
+  links:
+    - https://www.instagram.com/liminal.lighting/
+    - https://liminallighting.etsy.com
+    - https://github.com/1liminal1/LiminalLights
+
+# Shared links used by the layout
+shop_url: https://liminallighting.etsy.com
+docs_url: https://github.com/1liminal1/LiminalLights/wiki
+meta_pixel_id: "1597739672026153"
+facebook_domain_verification: psivvdzsfgeracrqzfcovuw0fseka4
 
 # GitHub metadata
 repository: 1liminal1/LiminalLights
@@ -25,10 +37,14 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /docs/images/man.gif
+      image: /docs/images/og-home.jpg
 
-# Exclude unnecessary files from the build
+# Exclude unnecessary files from the build.
+# The READMEs are excluded because GitHub Pages' optional-front-matter and
+# readme-index plugins otherwise publish docs/images/README.md as a stray page.
 exclude:
   - LiminalLights.wiki
   - LICENSE
+  - README.md
+  - docs/images/README.md
   - .git

@@ -1,0 +1,19 @@
+{%- assign p = site.data.products | where: "id", page.product | first -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": {{ p.name | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "image": {{ p.og_image | absolute_url | jsonify }},
+    "url": {{ p.page | absolute_url | jsonify }},
+    "sku": {{ p.id | jsonify }},
+    "brand": { "@type": "Brand", "name": {{ site.title | jsonify }} },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "LEDs", "value": {{ p.leds | jsonify }} },
+      { "@type": "PropertyValue", "name": "Resolution", "value": {{ p.resolution | jsonify }} },
+      { "@type": "PropertyValue", "name": "Pixel pitch", "value": {{ p.pitch | jsonify }} },
+      { "@type": "PropertyValue", "name": "Enclosure", "value": {{ p.enclosure | jsonify }} }
+    ]
+  }
+  </script>

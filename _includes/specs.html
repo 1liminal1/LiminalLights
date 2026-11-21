@@ -1,0 +1,16 @@
+{%- assign p = site.data.products | where: "id", include.id | first -%}
+<div class="specs">
+  <h2 class="specs-title">Specifications</h2>
+  <dl>
+    <div><dt>LEDs</dt><dd>{{ p.leds }}</dd></div>
+    <div><dt>Resolution</dt><dd>{{ p.resolution }} pixels</dd></div>
+    <div><dt>Pixel pitch</dt><dd>{{ p.pitch }}</dd></div>
+    <div><dt>Display per face</dt><dd>{{ p.face }}</dd></div>
+    <div><dt>Enclosure</dt><dd>{{ p.enclosure | replace: " × ", " wide × " }} tall</dd></div>
+    <div><dt>Display type</dt><dd>{{ p.display_type }}</dd></div>
+    <div><dt>Audio reactive</dt><dd>Yes, built-in microphone</dd></div>
+    <div><dt>Smart home</dt><dd>Alexa &amp; Home Assistant</dd></div>
+    <div><dt>Connectivity</dt><dd>WiFi</dd></div>
+    <div><dt>PixelForge</dt><dd>Yes, easy GIF uploads</dd></div>
+  </dl>
+</div>

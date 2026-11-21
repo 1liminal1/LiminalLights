@@ -1,0 +1,12 @@
+{%- comment -%}
+  Ambient looping product video. main.js adds a pause/play control (WCAG 2.2.2),
+  pauses it off-screen, and does not autoplay under prefers-reduced-motion.
+  Params: src, poster, label, size (px, square), class, eager
+{%- endcomment -%}
+<div class="ambient {{ include.class }}">
+  <video autoplay muted loop playsinline preload="{% if include.eager %}auto{% else %}metadata{% endif %}"
+         poster="{{ include.poster | relative_url }}" width="{{ include.size | default: 800 }}" height="{{ include.size | default: 800 }}"
+         aria-label="{{ include.label }}">
+    <source src="{{ include.src | relative_url }}" type="video/mp4">
+  </video>
+</div>

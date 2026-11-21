@@ -1,0 +1,21 @@
+{%- assign nav_items = "prism-32|Prism-32|/prism-32.html,prism-64-small|Prism-64|/prism-64-small.html,prism-64-large|Prism-64 Large|/prism-64-large.html,compare|Compare|/#compare" | split: "," -%}
+  <header class="nav">
+    <div class="nav-container">
+      <a href="{{ '/' | relative_url }}" class="nav-logo"{% if page.nav == "home" %} aria-current="page"{% endif %}>
+        <img src="{{ '/docs/images/logo-nav.webp' | relative_url }}" alt="Liminal Lights home" width="163" height="72">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          {%- for item in nav_items %}
+          {%- assign bits = item | split: "|" %}
+          <li><a href="{{ bits[2] | relative_url }}"{% if page.nav == bits[0] %} aria-current="page"{% endif %}>{{ bits[1] }}</a></li>
+          {%- endfor %}
+          <li><a href="{{ site.docs_url }}" target="_blank" rel="noopener">Docs<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="{{ site.shop_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Shop<span class="sr-only"> on Etsy (opens in a new tab)</span> {% include icon.html name="external" %}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>

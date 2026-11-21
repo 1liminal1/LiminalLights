@@ -1,0 +1,53 @@
+# Single source of truth for model specs. The home cards, the comparison
+# table and each product page's spec list all render from this file, so a
+# spec changed here changes everywhere.
+- id: prism-32
+  name: Prism-32
+  page: /prism-32.html
+  buy: /buy/prism-32
+  docs: https://github.com/1liminal1/LiminalLights/wiki/Prism-32
+  leds: "3,072"
+  resolution: 32x32
+  pitch: 4 mm
+  display_type: WLED effects + GIFs
+  face: 12.8 cm
+  enclosure: 19 × 21 cm
+  built_for: Close range, bolder pixels
+  summary: Enhanced resolution for GIFs and detailed animations.
+  card_video: /docs/images/Prism-32-Hero.mp4
+  card_poster: /docs/images/Prism-32-Hero-poster.webp
+  og_image: /docs/images/og-prism-32.jpg
+
+- id: prism-64-small
+  name: Prism-64
+  page: /prism-64-small.html
+  buy: /buy/prism-64-small
+  docs: https://github.com/1liminal1/LiminalLights/wiki/Prism-64
+  leds: "12,288"
+  resolution: 64x64
+  pitch: 2 mm
+  display_type: WLED effects + detailed GIFs
+  face: 12.8 cm
+  enclosure: 19 × 21 cm
+  built_for: Desk, bedside, beside the monitor
+  summary: The full pixel count at 2 mm pitch, built for close range.
+  card_video: /docs/images/Prism-64-Card.mp4
+  card_poster: /docs/images/Prism-64-Card-poster.webp
+  og_image: /docs/images/og-prism-64.jpg
+
+- id: prism-64-large
+  name: Prism-64 Large
+  page: /prism-64-large.html
+  buy: /buy/prism-64-large
+  docs: https://github.com/1liminal1/LiminalLights/wiki/Prism-64
+  leds: "12,288"
+  resolution: 64x64
+  pitch: 3 mm
+  display_type: WLED effects + detailed GIFs
+  face: 19.2 cm
+  enclosure: 28 × 31 cm
+  built_for: Seen from across a room
+  summary: The same pixels at 3 mm pitch, built to be seen from across a room.
+  card_video: /docs/images/Prism-64L-Card.mp4
+  card_poster: /docs/images/Prism-64L-Card-poster.webp
+  og_image: /docs/images/og-prism-64-large.jpg
