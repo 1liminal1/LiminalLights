@@ -1,79 +1,104 @@
-// Liminal Lights - Main JavaScript
+// Liminal Lights - site behaviour. Everything here is progressive: the site
+// works without it.
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Mobile Navigation Toggle
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', function () {
+  var nav = document.querySelector('.nav');
+
+  // Mobile navigation
+  var navToggle = document.querySelector('.nav-toggle');
+  var navLinks = document.getElementById('nav-links');
+
+  function setMenu(open) {
+    navToggle.setAttribute('aria-expanded', String(open));
+    navLinks.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+  }
 
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
-      navToggle.classList.toggle('active');
+    navToggle.addEventListener('click', function () {
+      setMenu(navToggle.getAttribute('aria-expanded') !== 'true');
     });
-
-    // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navToggle.classList.remove('active');
-      });
+    navLinks.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setMenu(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        navToggle.focus();
+      }
     });
   }
 
-  // Back to Top Button
-  const backToTop = document.querySelector('.back-to-top');
+  // Nav shadow once scrolled; back-to-top visibility
+  var backToTop = document.querySelector('.back-to-top');
+  function onScroll() {
+    var y = window.scrollY;
+    if (nav) nav.classList.toggle('scrolled', y > 8);
+    if (backToTop) backToTop.classList.toggle('visible', y > 600);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   if (backToTop) {
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-
-    backToTop.addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+      var main = document.getElementById('main');
+      if (main) main.focus({ preventScroll: true });
     });
   }
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const navHeight = document.querySelector('.nav').offsetHeight;
-        const targetPosition = target.offsetTop - navHeight - 20;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+  // Ambient videos: pause/play control (WCAG 2.2.2), no autoplay under
+  // prefers-reduced-motion, and pause while off-screen to save CPU/battery.
+  var videos = document.querySelectorAll('.ambient video');
+  var userPaused = new WeakSet();
+
+  videos.forEach(function (video) {
+    var label = video.getAttribute('aria-label') || 'video';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'ambient-toggle';
+
+    function sync() {
+      var playing = !video.paused;
+      btn.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + label);
+      btn.dataset.state = playing ? 'playing' : 'paused';
+    }
+
+    btn.addEventListener('click', function () {
+      if (video.paused) {
+        userPaused.delete(video);
+        video.play().catch(function () {});
+      } else {
+        userPaused.add(video);
+        video.pause();
       }
     });
-  });
+    video.addEventListener('play', sync);
+    video.addEventListener('pause', sync);
 
-  // Active nav link based on current page
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
+    if (reduceMotion.matches) {
+      video.removeAttribute('autoplay');
+      video.pause();
+      userPaused.add(video);
     }
+
+    video.parentNode.appendChild(btn);
+    sync();
   });
 
-  // Image lazy loading fallback for older browsers.
-  // Only runs where native lazy loading is absent, and only for images that
-  // actually declare a data-src to swap in.
-  if (!('loading' in HTMLImageElement.prototype)) {
-    const images = document.querySelectorAll('img[loading="lazy"][data-src]');
-    images.forEach(img => {
-      img.src = img.dataset.src;
-    });
+  if ('IntersectionObserver' in window && videos.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var v = entry.target;
+        if (entry.isIntersecting) {
+          if (!userPaused.has(v)) v.play().catch(function () {});
+        } else if (!v.paused) {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.15 });
+    videos.forEach(function (v) { io.observe(v); });
   }
 });

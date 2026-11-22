@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-AU' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="facebook-domain-verification" content="{{ site.facebook_domain_verification }}">
+  <meta name="theme-color" content="#07080d">
+  <meta name="color-scheme" content="dark">
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/docs/images/favicon-32x32.png' | relative_url }}">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  {%- if page.preload_media %}
+  <link rel="preload" as="image" href="{{ page.preload_media | relative_url }}">
+  {%- endif %}
+  {% include pixel.html %}
+  {%- if page.product %}
+  {% include product-schema.html %}
+  {%- endif %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include nav.html %}
+  <main id="main" tabindex="-1">
+{{ content }}
+  </main>
+  {% include footer.html %}
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+  <script src="{{ '/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{%- assign p = site.data.products | where: "id", include.id | first -%}
+<div class="btn-group">
+  <a href="{{ p.buy | relative_url }}" target="_blank" rel="noopener" class="btn btn-primary">Buy on Etsy<span class="sr-only"> (opens in a new tab)</span> {% include icon.html name="external" %}</a>
+  <a href="{{ p.docs }}" target="_blank" rel="noopener" class="btn btn-secondary">View Docs<span class="sr-only"> (opens in a new tab)</span></a>
+</div>

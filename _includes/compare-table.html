@@ -1,0 +1,29 @@
+<div class="table-wrap" role="region" aria-labelledby="compare-caption" tabindex="0">
+  <table class="comparison-table">
+    <caption id="compare-caption" class="sr-only">Prism model comparison</caption>
+    <thead>
+      <tr>
+        <th scope="col">Model</th>
+        <th scope="col">LEDs</th>
+        <th scope="col">Resolution</th>
+        <th scope="col">Pitch</th>
+        <th scope="col">Display per face</th>
+        <th scope="col">Enclosure</th>
+        <th scope="col">Built for</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for p in site.data.products %}
+      <tr>
+        <th scope="row"><a href="{{ p.page | relative_url }}">{{ p.name }}</a></th>
+        <td>{{ p.leds }}</td>
+        <td>{{ p.resolution }}</td>
+        <td>{{ p.pitch }}</td>
+        <td>{{ p.face }}</td>
+        <td>{{ p.enclosure }}</td>
+        <td>{{ p.built_for }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</div>
