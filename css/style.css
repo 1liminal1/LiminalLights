@@ -728,7 +728,8 @@ section { padding: var(--section) 0; position: relative; }
   .nav-links .btn { width: 100%; }
 
   .hero-grid, .product-hero-grid, .split { grid-template-columns: 1fr; }
-  .hero-media { max-width: 520px; margin: 0 auto; width: 100%; }
+  .hero { padding-top: calc(var(--nav-h) + 1.25rem); }
+  .hero-media { order: -1; max-width: 520px; margin: 0 auto; width: 100%; }
   .product-hero .media { position: static; max-width: 560px; margin: 0 auto; width: 100%; }
   .split-media { order: -1; max-width: 560px; margin: 0 auto; width: 100%; }
 }
